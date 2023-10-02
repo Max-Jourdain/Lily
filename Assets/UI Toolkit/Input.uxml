@@ -1,3 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:TextField label="Text Field" placeholder-text="filler text" style="margin-top: 0; color: rgb(255, 255, 255); font-size: 26px;" />
+    <Style src="project://database/Assets/MyStyle.uss?fileID=7433441132597879392&amp;guid=8a669278e5e9d48d3aca2a51d2b73ce5&amp;type=3#MyStyle" />
+    <ui:TextField label="Text Field" placeholder-text="Enter Text..." hide-placeholder-on-focus="false" class="unity-text-field" style="margin-top: 0; color: rgb(0, 0, 0); font-size: 18px; -unity-text-align: upper-center;" />
 </ui:UXML>

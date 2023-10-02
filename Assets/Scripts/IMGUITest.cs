@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class IMGUITest : MonoBehaviour
         // Label
         GUI.skin.label.fontSize = 36;
         GUI.skin.label.alignment = TextAnchor.MiddleCenter;
+        GUI.skin.label.normal.textColor = Color.black;
         GUI.Label(new Rect(Screen.width / 2 - 300, Screen.height - 300, 600, 80), "IMGUI");
 
         // Input Field
