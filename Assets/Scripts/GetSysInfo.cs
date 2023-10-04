@@ -1,24 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using System.Text;
 using TMPro;
 
 public class GetSysInfo : MonoBehaviour
 {
-    public TMP_Text text;
+    [SerializeField]
+    private TMP_Text text;
 
-    void Start()
+    private void Start()
     {
-        GetSystemVersion();
+        UpdateSystemInfoText();
     }
 
-    void GetSystemVersion()
+    private void UpdateSystemInfoText()
     {
-        text.text = "System Version: " + SystemInfo.operatingSystem;
-        text.text += "\nProcessor: " + SystemInfo.processorType;
-        text.text += "\nGraphics: " + SystemInfo.graphicsDeviceName;
-        text.text += "\nMemory: " + SystemInfo.systemMemorySize + "MB";
-        text.text += "\nUnity Version: " + Application.unityVersion;
+        StringBuilder sysInfo = new StringBuilder();
+        sysInfo.AppendLine("System Version: " + SystemInfo.operatingSystem);
+        sysInfo.AppendLine("Processor: " + SystemInfo.processorType);
+        sysInfo.AppendLine("Graphics: " + SystemInfo.graphicsDeviceName);
+        sysInfo.AppendLine("Memory: " + SystemInfo.systemMemorySize + "MB");
+        sysInfo.AppendLine("Unity Version: " + Application.unityVersion);
+
+        text.text = sysInfo.ToString();
     }
 }
