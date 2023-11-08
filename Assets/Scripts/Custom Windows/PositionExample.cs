@@ -8,7 +8,7 @@ public class PositionExample : EditorWindow
     Vector2 p2;
     bool showBtn = true;    
     
-    [MenuItem("PR_Issues/Window POS")]
+    [MenuItem("Tests/Window POS")]
     static void Init()
     {
         GetWindow<PositionExample>("Window POS");
